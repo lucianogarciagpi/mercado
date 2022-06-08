@@ -11,7 +11,19 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Cadastrando produto"),
-        )
+        ),
+        body: Column(
+          children: <Widget>[
+            const TextField(),
+            const TextField(),
+            const TextField(),
+            ElevatedButton(
+                onPressed: (){},
+                child: const Text('Cadastrar'),
+            )
+
+          ],
+        ),
       ),
     );
   }
