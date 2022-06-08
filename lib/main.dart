@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+  final TextEditingController _controladorNome = TextEditingController();
+  final TextEditingController _controladorQuantidade = TextEditingController();
+  final TextEditingController _controladorValor = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +18,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            const TextField(),
-            const TextField(),
-            const TextField(),
+            TextField(controller: _controladorNome),
+            TextField(controller: _controladorQuantidade),
+            TextField(controller: _controladorValor),
             ElevatedButton(
                 onPressed: (){},
                 child: const Text('Cadastrar'),
