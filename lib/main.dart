@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
                   final String nome = _controladorNome.text;
                   final int? quantidade = int.tryParse(_controladorQuantidade.text);
                   final double? valor = double.tryParse(_controladorValor.text);
+
+                  final Produto produtoNovo = Produto(nome, quantidade!, valor!);
+                  print(produtoNovo);
                 },
                 child: const Text('Cadastrar'),
             )
