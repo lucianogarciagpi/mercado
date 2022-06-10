@@ -18,25 +18,37 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Cadastrando produto"),
         ),
-        body: Column(
-          children: <Widget>[
-            TextField(controller: _controladorNome),
-            TextField(controller: _controladorQuantidade),
-            TextField(controller: _controladorValor),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: <Widget>[
+              TextField(controller: _controladorNome),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: TextField(controller: _controladorQuantidade),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: TextField(controller: _controladorValor),
+              ),
 
-            ElevatedButton(
-                onPressed: (){
-                  final String nome = _controladorNome.text;
-                  final int? quantidade = int.tryParse(_controladorQuantidade.text);
-                  final double? valor = double.tryParse(_controladorValor.text);
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: ElevatedButton(
+                    onPressed: (){
+                      final String nome = _controladorNome.text;
+                      final int? quantidade = int.tryParse(_controladorQuantidade.text);
+                      final double? valor = double.tryParse(_controladorValor.text);
 
-                  final Produto produtoNovo = Produto(nome, quantidade!, valor!);
-                  print(produtoNovo);
-                },
-                child: const Text('Cadastrar'),
-            )
+                      final Produto produtoNovo = Produto(nome, quantidade!, valor!);
+                      print(produtoNovo);
+                    },
+                    child: const Text('Cadastrar'),
+                ),
+              )
 
-          ],
+            ],
+          ),
         ),
       ),
     );
