@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'models/produto-model.dart';
 
 void main() => runApp(MyApp());
@@ -24,26 +23,22 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               TextField(
                 controller: _controladorNome,
-                decoration: const InputDecoration(
-                  labelText: "nome",
-                ),
+                decoration: const InputDecoration(labelText: "nome"),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
                   controller: _controladorQuantidade,
-                  decoration: const InputDecoration(
-                    labelText: "quantidade",
-                  ),
+                  decoration: const InputDecoration(labelText: "quantidade"),
+                  keyboardType: TextInputType.number,
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: TextField(
                   controller: _controladorValor,
-                  decoration: const InputDecoration(
-                    labelText: "valor",
-                  ),
+                  decoration: const InputDecoration(labelText: "valor"),
+                  keyboardType: TextInputType.number,
                 ),
               ),
               Padding(
